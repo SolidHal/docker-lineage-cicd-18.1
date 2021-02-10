@@ -331,6 +331,10 @@ for branch in ${BRANCH_NAME//,/ }; do
               cp "$image.img" "$ZIP_DIR/$zipsubdir/$recovery_name"
               break
             fi
+
+	  if [ "$BOOT_IMG" = true ]; then
+            find . -maxdepth 1 -name 'boot.img' -type f -exec mv {} "$ZIP_DIR/$zipsubdir/" \; &>> "$DEBUG_LOG"
+	  fi
           done &>> "$DEBUG_LOG"
           cd "$source_dir"
           build_successful=true
