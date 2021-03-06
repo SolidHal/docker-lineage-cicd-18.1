@@ -142,6 +142,8 @@ Other useful settings are:
     mirror of the LineageOS source (> 200 GB)
  * `CRONTAB_TIME (now)`: instead of building immediately and exit, build at the
     specified time (uses standard cron format)
+ * `REPO_SYNC (true)`: change this to `false` if you want to skip syncing repo
+    and build the ROM as is.
  * `ZIP_SUBDIR (true)`: Move the resulting zips to $ZIP_DIR/$codename instead of $ZIP_DIR/
 
 The full list of settings, including the less interesting ones not mentioned in
